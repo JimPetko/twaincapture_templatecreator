@@ -1,0 +1,38 @@
+﻿<Exam
+  ExamName="4 BiteWings"
+  ImageCount="4">
+  <Layout>
+    <Image1
+      SizeX="120"
+      SizeY="90"
+      PositionX="0"
+      PositionY="160"
+      Mirror="True"
+      Flip="False"
+      Rotation="90" />
+    <Image2
+      SizeX="120"
+      SizeY="90"
+      PositionX="130"
+      PositionY="160"
+      Mirror="True"
+      Flip="False"
+      Rotation="90" />
+    <Image3
+      SizeX="120"
+      SizeY="90"
+      PositionX="270"
+      PositionY="160"
+      Mirror="True"
+      Flip="True"
+      Rotation="90" />
+    <Image4
+      SizeX="120"
+      SizeY="90"
+      PositionX="410"
+      PositionY="160"
+      Mirror="True"
+      Flip="True"
+      Rotation="90" />
+  </Layout>
+</Exam>

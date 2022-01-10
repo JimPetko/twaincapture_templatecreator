@@ -1,0 +1,168 @@
+{
+  "ExamName": "Full Mouth Exam[18]",
+  "ImageCount": "18",
+  "Layout": {
+    "Image #1": {
+      "SizeX": "90",
+      "SizeY": "120",
+      "PosX": "10",
+      "PosY": "10",
+      "Mirror": "true",
+      "Flip": "false",
+      "Rotate": "0"
+    },
+    "Image #2": {
+      "SizeX": "90",
+      "SizeY": "120",
+      "PosX": "135",
+      "PosY": "10",
+      "Mirror": "true",
+      "Flip": "false",
+      "Rotate": "0"
+    },
+    "Image #3": {
+      "SizeX": "90",
+      "SizeY": "120",
+      "PosX": "670",
+      "PosY": "200",
+      "Mirror": "true",
+      "Flip": "true",
+      "Rotate": "90"
+    },
+    "Image #4": {
+      "SizeX": "90",
+      "SizeY": "120",
+      "PosX": "670",
+      "PosY": "200",
+      "Mirror": "true",
+      "Flip": "true",
+      "Rotate": "90"
+    },
+    "Image #5": {
+      "SizeX": "90",
+      "SizeY": "120",
+      "PosX": "670",
+      "PosY": "10",
+      "Mirror": "true",
+      "Flip": "true",
+      "Rotate": "90"
+    },
+    "Image #6": {
+      "SizeX": "90",
+      "SizeY": "120",
+      "PosX": "545",
+      "PosY": "10",
+      "Mirror": "true",
+      "Flip": "true",
+      "Rotate": "90"
+    },
+    "Image #7": {
+      "SizeX": "90",
+      "SizeY": "120",
+      "PosX": "10",
+      "PosY": "200",
+      "Mirror": "true",
+      "Flip": "false",
+      "Rotate": "90"
+    },
+    "Image #8": {
+      "SizeX": "90",
+      "SizeY": "120",
+      "PosX": "135",
+      "PosY": "200",
+      "Mirror": "true",
+      "Flip": "false",
+      "Rotate": "90"
+    },
+    "Image #9": {
+      "SizeX": "90",
+      "SizeY": "120",
+      "PosX": "260",
+      "PosY": "10",
+      "Mirror": "false",
+      "Flip": "false",
+      "Rotate": "0"
+    },
+    "Image #10": {
+      "SizeX": "90",
+      "SizeY": "120",
+      "PosX": "355",
+      "PosY": "10",
+      "Mirror": "false",
+      "Flip": "false",
+      "Rotate": "0"
+    },
+    "Image #11": {
+      "SizeX": "90",
+      "SizeY": "120",
+      "PosX": "450",
+      "PosY": "10",
+      "Mirror": "false",
+      "Flip": "false",
+      "Rotate": "0"
+    },
+    "Image #12": {
+      "SizeX": "90",
+      "SizeY": "120",
+      "PosX": "450",
+      "PosY": "200",
+      "Mirror": "true",
+      "Flip": "true",
+      "Rotate": "0"
+    },
+    "Image #13": {
+      "SizeX": "90",
+      "SizeY": "120",
+      "PosX": "355",
+      "PosY": "200",
+      "Mirror": "true",
+      "Flip": "true",
+      "Rotate": "0"
+    },
+    "Image #14": {
+      "SizeX": "90",
+      "SizeY": "120",
+      "PosX": "260",
+      "PosY": "200",
+      "Mirror": "true",
+      "Flip": "true",
+      "Rotate": "0"
+    },
+    "Image #15": {
+      "SizeX": "90",
+      "SizeY": "120",
+      "PosX": "10",
+      "PosY": "105",
+      "Mirror": "true",
+      "Flip": "false",
+      "Rotate": "90"
+    },
+    "Image #16": {
+      "SizeX": "90",
+      "SizeY": "120",
+      "PosX": "135",
+      "PosY": "105",
+      "Mirror": "true",
+      "Flip": "false",
+      "Rotate": "90"
+    },
+    "Image #17": {
+      "SizeX": "90",
+      "SizeY": "120",
+      "PosX": "545",
+      "PosY": "105",
+      "Mirror": "true",
+      "Flip": "true",
+      "Rotate": "90"
+    },
+    "Image #18": {
+      "SizeX": "90",
+      "SizeY": "120",
+      "PosX": "670",
+      "PosY": "105",
+      "Mirror": "true",
+      "Flip": "true",
+      "Rotate": "90"
+    }
+  }
+}

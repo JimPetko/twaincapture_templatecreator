@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwainCapture_TemplateCreator", "TwainCapture_TemplateCreator\TwainCapture_TemplateCreator.csproj", "{7BC0E6D8-59C7-4DA3-B7E7-D552E03BCB27}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E6DDCD7B-70D5-411E-8D8C-467C8E6CCC15}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BC0E6D8-59C7-4DA3-B7E7-D552E03BCB27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BC0E6D8-59C7-4DA3-B7E7-D552E03BCB27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BC0E6D8-59C7-4DA3-B7E7-D552E03BCB27}.Debug|x86.ActiveCfg = Debug|x86
+		{7BC0E6D8-59C7-4DA3-B7E7-D552E03BCB27}.Debug|x86.Build.0 = Debug|x86
+		{7BC0E6D8-59C7-4DA3-B7E7-D552E03BCB27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BC0E6D8-59C7-4DA3-B7E7-D552E03BCB27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BC0E6D8-59C7-4DA3-B7E7-D552E03BCB27}.Release|x86.ActiveCfg = Release|x86
+		{7BC0E6D8-59C7-4DA3-B7E7-D552E03BCB27}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DCBD99C-8B7C-4547-B23F-E6A2008F7B37}
+	EndGlobalSection
+EndGlobal
