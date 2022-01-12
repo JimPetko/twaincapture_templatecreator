@@ -1,7 +1,6 @@
 C:\Users\petko\digidoc\Blu\TwainCapture_TemplateCreator\TwainCapture_TemplateCreator\bin\x86\Release\TwainCapture_TemplateCreator.exe.config
 C:\Users\petko\digidoc\Blu\TwainCapture_TemplateCreator\TwainCapture_TemplateCreator\bin\x86\Release\TwainCapture_TemplateCreator.exe
 C:\Users\petko\digidoc\Blu\TwainCapture_TemplateCreator\TwainCapture_TemplateCreator\bin\x86\Release\TwainCapture_TemplateCreator.pdb
-C:\Users\petko\digidoc\Blu\TwainCapture_TemplateCreator\TwainCapture_TemplateCreator\obj\x86\Release\TwainCapture_TemplateCreator.csproj.AssemblyReference.cache
 C:\Users\petko\digidoc\Blu\TwainCapture_TemplateCreator\TwainCapture_TemplateCreator\obj\x86\Release\TwainCapture_TemplateCreator.csproj.SuggestedBindingRedirects.cache
 C:\Users\petko\digidoc\Blu\TwainCapture_TemplateCreator\TwainCapture_TemplateCreator\obj\x86\Release\TwainCapture_TemplateCreator.Form1.resources
 C:\Users\petko\digidoc\Blu\TwainCapture_TemplateCreator\TwainCapture_TemplateCreator\obj\x86\Release\TwainCapture_TemplateCreator.Properties.Resources.resources

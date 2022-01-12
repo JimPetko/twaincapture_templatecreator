@@ -63,9 +63,9 @@ namespace TwainCapture_TemplateCreator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap grid {
+        internal static System.Drawing.Bitmap ClearImg {
             get {
-                object obj = ResourceManager.GetObject("grid", resourceCulture);
+                object obj = ResourceManager.GetObject("ClearImg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace TwainCapture_TemplateCreator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap grid2 {
+        internal static System.Drawing.Bitmap grid5 {
             get {
-                object obj = ResourceManager.GetObject("grid2", resourceCulture);
+                object obj = ResourceManager.GetObject("grid5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace TwainCapture_TemplateCreator.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap grid3 {
+        internal static System.Drawing.Bitmap save {
             get {
-                object obj = ResourceManager.GetObject("grid3", resourceCulture);
+                object obj = ResourceManager.GetObject("save", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +96,26 @@ namespace TwainCapture_TemplateCreator.Properties {
         internal static System.Drawing.Bitmap SensorOrient {
             get {
                 object obj = ResourceManager.GetObject("SensorOrient", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sequence {
+            get {
+                object obj = ResourceManager.GetObject("Sequence", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap setSeq_red {
+            get {
+                object obj = ResourceManager.GetObject("setSeq_red", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

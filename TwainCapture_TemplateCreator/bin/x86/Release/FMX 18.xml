@@ -1,0 +1,150 @@
+﻿<Exam
+  ExamName="FMX 18"
+  ImageCount="18">
+  <Layout>
+    <Image1
+      SizeX="120"
+      SizeY="90"
+      PositionX="30"
+      PositionY="130"
+      Mirror="True"
+      Flip="False"
+      Rotation="90" />
+    <Image2
+      SizeX="120"
+      SizeY="90"
+      PositionX="160"
+      PositionY="130"
+      Mirror="True"
+      Flip="False"
+      Rotation="90" />
+    <Image3
+      SizeX="120"
+      SizeY="90"
+      PositionX="730"
+      PositionY="330"
+      Mirror="True"
+      Flip="True"
+      Rotation="90" />
+    <Image4
+      SizeX="120"
+      SizeY="90"
+      PositionX="600"
+      PositionY="330"
+      Mirror="True"
+      Flip="True"
+      Rotation="90" />
+    <Image5
+      SizeX="120"
+      SizeY="90"
+      PositionX="730"
+      PositionY="130"
+      Mirror="True"
+      Flip="True"
+      Rotation="90" />
+    <Image6
+      SizeX="120"
+      SizeY="90"
+      PositionX="600"
+      PositionY="130"
+      Mirror="True"
+      Flip="True"
+      Rotation="90" />
+    <Image7
+      SizeX="120"
+      SizeY="90"
+      PositionX="30"
+      PositionY="330"
+      Mirror="True"
+      Flip="False"
+      Rotation="90" />
+    <Image8
+      SizeX="120"
+      SizeY="90"
+      PositionX="160"
+      PositionY="330"
+      Mirror="True"
+      Flip="False"
+      Rotation="90" />
+    <Image9
+      SizeX="90"
+      SizeY="120"
+      PositionX="290"
+      PositionY="130"
+      Mirror="False"
+      Flip="False"
+      Rotation="0" />
+    <Image10
+      SizeX="90"
+      SizeY="120"
+      PositionX="390"
+      PositionY="130"
+      Mirror="False"
+      Flip="False"
+      Rotation="0" />
+    <Image11
+      SizeX="90"
+      SizeY="120"
+      PositionX="490"
+      PositionY="130"
+      Mirror="False"
+      Flip="False"
+      Rotation="0" />
+    <Image12
+      SizeX="90"
+      SizeY="120"
+      PositionX="490"
+      PositionY="300"
+      Mirror="True"
+      Flip="True"
+      Rotation="0" />
+    <Image13
+      SizeX="90"
+      SizeY="120"
+      PositionX="390"
+      PositionY="300"
+      Mirror="True"
+      Flip="True"
+      Rotation="0" />
+    <Image14
+      SizeX="90"
+      SizeY="120"
+      PositionX="290"
+      PositionY="300"
+      Mirror="True"
+      Flip="True"
+      Rotation="0" />
+    <Image15
+      SizeX="120"
+      SizeY="90"
+      PositionX="30"
+      PositionY="230"
+      Mirror="True"
+      Flip="False"
+      Rotation="90" />
+    <Image16
+      SizeX="120"
+      SizeY="90"
+      PositionX="160"
+      PositionY="230"
+      Mirror="True"
+      Flip="False"
+      Rotation="90" />
+    <Image17
+      SizeX="120"
+      SizeY="90"
+      PositionX="730"
+      PositionY="230"
+      Mirror="True"
+      Flip="True"
+      Rotation="90" />
+    <Image18
+      SizeX="120"
+      SizeY="90"
+      PositionX="600"
+      PositionY="230"
+      Mirror="True"
+      Flip="True"
+      Rotation="90" />
+  </Layout>
+</Exam>

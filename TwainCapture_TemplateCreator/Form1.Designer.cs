@@ -33,23 +33,27 @@ namespace TwainCapture_TemplateCreator
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pan_Tools = new System.Windows.Forms.Panel();
-            this.btn_SetSequence = new System.Windows.Forms.Button();
             this.pbx_NewBotPA = new System.Windows.Forms.PictureBox();
             this.pbx_NewTopPA = new System.Windows.Forms.PictureBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.btn_Clear = new System.Windows.Forms.Button();
             this.pbx_NewRightBW = new System.Windows.Forms.PictureBox();
             this.pbx_NewLeftBW = new System.Windows.Forms.PictureBox();
             this.tb_TemplateName = new System.Windows.Forms.TextBox();
-            this.btn_SaveTemplate = new System.Windows.Forms.Button();
-            this.lab_TemplateName = new System.Windows.Forms.Label();
-            this.pan_Template = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.lab_Sequence = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbx_SetSequence = new System.Windows.Forms.PictureBox();
+            this.pbx_ClearImg = new System.Windows.Forms.PictureBox();
+            this.pan_Template = new System.Windows.Forms.Panel();
             this.pan_Tools.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewBotPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewTopPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewRightBW)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewLeftBW)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_SetSequence)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_ClearImg)).BeginInit();
             this.SuspendLayout();
             // 
             // pan_Tools
@@ -60,20 +64,10 @@ namespace TwainCapture_TemplateCreator
             this.pan_Tools.Controls.Add(this.splitter1);
             this.pan_Tools.Controls.Add(this.pbx_NewRightBW);
             this.pan_Tools.Controls.Add(this.pbx_NewLeftBW);
-            this.pan_Tools.Location = new System.Drawing.Point(1026, 96);
+            this.pan_Tools.Location = new System.Drawing.Point(1022, 44);
             this.pan_Tools.Name = "pan_Tools";
-            this.pan_Tools.Size = new System.Drawing.Size(157, 165);
+            this.pan_Tools.Size = new System.Drawing.Size(147, 148);
             this.pan_Tools.TabIndex = 1;
-            // 
-            // btn_SetSequence
-            // 
-            this.btn_SetSequence.Location = new System.Drawing.Point(1030, 296);
-            this.btn_SetSequence.Name = "btn_SetSequence";
-            this.btn_SetSequence.Size = new System.Drawing.Size(95, 23);
-            this.btn_SetSequence.TabIndex = 9;
-            this.btn_SetSequence.Text = "Set Sequence";
-            this.btn_SetSequence.UseVisualStyleBackColor = true;
-            this.btn_SetSequence.Click += new System.EventHandler(this.btn_SetSequence_Click);
             // 
             // pbx_NewBotPA
             // 
@@ -103,19 +97,9 @@ namespace TwainCapture_TemplateCreator
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 161);
+            this.splitter1.Size = new System.Drawing.Size(3, 144);
             this.splitter1.TabIndex = 6;
             this.splitter1.TabStop = false;
-            // 
-            // button2
-            // 
-            this.btn_Clear.Location = new System.Drawing.Point(1030, 267);
-            this.btn_Clear.Name = "btn_Clear";
-            this.btn_Clear.Size = new System.Drawing.Size(54, 23);
-            this.btn_Clear.TabIndex = 5;
-            this.btn_Clear.Text = "Clear All";
-            this.btn_Clear.UseVisualStyleBackColor = true;
-            this.btn_Clear.Click += new System.EventHandler(this.btn_Clear_Click);
             // 
             // pbx_NewRightBW
             // 
@@ -144,65 +128,103 @@ namespace TwainCapture_TemplateCreator
             // 
             // tb_TemplateName
             // 
-            this.tb_TemplateName.Location = new System.Drawing.Point(977, 14);
+            this.tb_TemplateName.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.tb_TemplateName.Location = new System.Drawing.Point(1026, 8);
             this.tb_TemplateName.Name = "tb_TemplateName";
-            this.tb_TemplateName.Size = new System.Drawing.Size(147, 20);
+            this.tb_TemplateName.Size = new System.Drawing.Size(124, 22);
             this.tb_TemplateName.TabIndex = 3;
             this.tb_TemplateName.Text = "TemplateName";
             this.tb_TemplateName.Enter += new System.EventHandler(this.textBox1_Enter);
             // 
-            // btn_SaveTemplate
+            // label1
             // 
-            this.btn_SaveTemplate.Location = new System.Drawing.Point(1130, 11);
-            this.btn_SaveTemplate.Name = "btn_SaveTemplate";
-            this.btn_SaveTemplate.Size = new System.Drawing.Size(44, 23);
-            this.btn_SaveTemplate.TabIndex = 4;
-            this.btn_SaveTemplate.Text = "Save";
-            this.btn_SaveTemplate.UseVisualStyleBackColor = true;
-            this.btn_SaveTemplate.Click += new System.EventHandler(this.btn_SaveTemplate_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.label1.Location = new System.Drawing.Point(1026, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Add Image";
             // 
-            // lab_TemplateName
+            // lab_Sequence
             // 
-            this.lab_TemplateName.AutoSize = true;
-            this.lab_TemplateName.Location = new System.Drawing.Point(864, 17);
-            this.lab_TemplateName.Name = "lab_TemplateName";
-            this.lab_TemplateName.Size = new System.Drawing.Size(110, 13);
-            this.lab_TemplateName.TabIndex = 7;
-            this.lab_TemplateName.Text = "Name Your Template:";
+            this.lab_Sequence.AutoSize = true;
+            this.lab_Sequence.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lab_Sequence.Location = new System.Drawing.Point(1069, 211);
+            this.lab_Sequence.Name = "lab_Sequence";
+            this.lab_Sequence.Size = new System.Drawing.Size(99, 17);
+            this.lab_Sequence.TabIndex = 14;
+            this.lab_Sequence.Text = " - Set Sequence";
+            this.lab_Sequence.Click += new System.EventHandler(this.btn_SetSequence_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1068, 278);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.TabIndex = 15;
+            this.label2.Text = " - Clear All";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::TwainCapture_TemplateCreator.Properties.Resources.save;
+            this.pictureBox1.Location = new System.Drawing.Point(1152, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(27, 26);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.btn_SaveTemplate_Click);
+            // 
+            // pbx_SetSequence
+            // 
+            this.pbx_SetSequence.Image = global::TwainCapture_TemplateCreator.Properties.Resources.Sequence;
+            this.pbx_SetSequence.Location = new System.Drawing.Point(1029, 206);
+            this.pbx_SetSequence.Name = "pbx_SetSequence";
+            this.pbx_SetSequence.Size = new System.Drawing.Size(36, 31);
+            this.pbx_SetSequence.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_SetSequence.TabIndex = 12;
+            this.pbx_SetSequence.TabStop = false;
+            this.pbx_SetSequence.Click += new System.EventHandler(this.btn_SetSequence_Click);
+            // 
+            // pbx_ClearImg
+            // 
+            this.pbx_ClearImg.Image = global::TwainCapture_TemplateCreator.Properties.Resources.ClearImg;
+            this.pbx_ClearImg.Location = new System.Drawing.Point(1029, 270);
+            this.pbx_ClearImg.Name = "pbx_ClearImg";
+            this.pbx_ClearImg.Size = new System.Drawing.Size(36, 31);
+            this.pbx_ClearImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_ClearImg.TabIndex = 11;
+            this.pbx_ClearImg.TabStop = false;
+            this.pbx_ClearImg.Click += new System.EventHandler(this.btn_Clear_Click);
             // 
             // pan_Template
             // 
             this.pan_Template.BackColor = System.Drawing.Color.Gray;
-            this.pan_Template.BackgroundImage = global::TwainCapture_TemplateCreator.Properties.Resources.grid3;
+            this.pan_Template.BackgroundImage = global::TwainCapture_TemplateCreator.Properties.Resources.grid5;
             this.pan_Template.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pan_Template.Location = new System.Drawing.Point(0, 45);
+            this.pan_Template.Location = new System.Drawing.Point(2, 3);
             this.pan_Template.Name = "pan_Template";
             this.pan_Template.Size = new System.Drawing.Size(1020, 670);
             this.pan_Template.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1026, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Add Image";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1186, 724);
+            this.ClientSize = new System.Drawing.Size(1180, 677);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lab_Sequence);
+            this.Controls.Add(this.pbx_SetSequence);
+            this.Controls.Add(this.pbx_ClearImg);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_SetSequence);
-            this.Controls.Add(this.lab_TemplateName);
             this.Controls.Add(this.pan_Tools);
             this.Controls.Add(this.pan_Template);
-            this.Controls.Add(this.btn_Clear);
-            this.Controls.Add(this.btn_SaveTemplate);
             this.Controls.Add(this.tb_TemplateName);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -213,6 +235,9 @@ namespace TwainCapture_TemplateCreator
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewTopPA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewRightBW)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewLeftBW)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_SetSequence)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbx_ClearImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,15 +249,16 @@ namespace TwainCapture_TemplateCreator
         private System.Windows.Forms.Panel pan_Tools;
         private System.Windows.Forms.PictureBox pbx_NewRightBW;
         private System.Windows.Forms.PictureBox pbx_NewLeftBW;
-        private System.Windows.Forms.Button btn_Clear;
-        private System.Windows.Forms.Button btn_SaveTemplate;
         private System.Windows.Forms.TextBox tb_TemplateName;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Label lab_TemplateName;
         private System.Windows.Forms.PictureBox pbx_NewBotPA;
         private System.Windows.Forms.PictureBox pbx_NewTopPA;
-        private System.Windows.Forms.Button btn_SetSequence;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pbx_ClearImg;
+        private System.Windows.Forms.PictureBox pbx_SetSequence;
+        private System.Windows.Forms.Label lab_Sequence;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

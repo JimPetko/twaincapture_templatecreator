@@ -103,6 +103,7 @@ namespace TwainCapture_TemplateCreator
         {
             pan_Template.Controls.Clear();
             seq_Set = false;
+
         }
 
         /// <summary>
@@ -195,15 +196,15 @@ namespace TwainCapture_TemplateCreator
             if (!b_isSettingSequence)
             {
                 b_isSettingSequence = true;
-                btn_SetSequence.BackColor = Color.Red;
-                btn_SetSequence.Text = "Save Sequence";
-                seq_Set = true;
+                pbx_SetSequence.Image = TwainCapture_TemplateCreator.Properties.Resources.setSeq_red;
+                lab_Sequence.Text = " - Save Sequence";
             }
             else
             {
                 b_isSettingSequence = false;
-                btn_SetSequence.BackColor = System.Drawing.SystemColors.Control;
-                seq_Index = 0;
+                pbx_SetSequence.Image = TwainCapture_TemplateCreator.Properties.Resources.Sequence;
+                seq_Index = 1;
+                lab_Sequence.Text = " - Set Sequence";
             }
         }
 
@@ -214,87 +215,94 @@ namespace TwainCapture_TemplateCreator
         /// <param name="e"></param>
         private void btn_SaveTemplate_Click(object sender, EventArgs e)
         {
-            int imgCount = 0;
-            foreach (Control c in pan_Template.Controls)
-                if (c is PictureBox)
-                {
-                    imgCount++;
-                    if (!seq_Set)
-                    {
-                        MessageBox.Show("Please Set the Capture Sequence before saving.");
-                        goto End;
-                    }
-                }
-
-            //Tool is designed to be in the same directory as TwainCapture.
-            string saveDir = Directory.GetCurrentDirectory();
-            string saveFile = @"\" + tb_TemplateName.Text + ".xml";
-            //init settings for xml formatting
-            XmlWriterSettings settings = new XmlWriterSettings();
-            settings.Indent = true;
-            settings.OmitXmlDeclaration = true;
-            settings.NewLineOnAttributes = true;
-            //init writer object
-            XmlWriter makexml = XmlWriter.Create(saveDir + saveFile, settings);
-            makexml.WriteStartDocument();
-            makexml.WriteStartElement("Exam");
-            makexml.WriteAttributeString("ExamName", tb_TemplateName.Text);
-
-            makexml.WriteAttributeString("ImageCount", imgCount.ToString());
-            makexml.WriteStartElement("Layout");
-            string[] imageSequence = new string[imgCount]; //add images into array and then sort them by Image#
-            RadiographProperties[] dip = new RadiographProperties[imgCount];
-            List<RadiographProperties> rap = new List<RadiographProperties>();
-            int index = 0;
-            foreach (Control c in pan_Template.Controls)
-                if (c is PictureBox)
-                {
-
-                    
-                    string[] parseTag = c.Tag.ToString().Split('-');
-                    if (parseTag[0] == "True")
-                        parseTag[0] = "90";
-                    else
-                        parseTag[0] = "0";
-                    
-                    RadiographProperties cur_image = new RadiographProperties(c.TabIndex, c.Width, c.Height, c.Location.X, c.Location.Y,parseTag[2],parseTag[1], parseTag[0]);
-                    dip[index] = cur_image;
-                    rap.Add(cur_image);
-                    index++;
-                    //makexml.WriteStartElement("Image" + c.TabIndex);
-                    //makexml.WriteAttributeString("SizeX", c.Width.ToString());
-                    //makexml.WriteAttributeString("SizeY", c.Height.ToString());
-                    //makexml.WriteAttributeString("PositionX", c.Location.X.ToString());
-                    //makexml.WriteAttributeString("PositionY", c.Location.Y.ToString());
-                    //makexml.WriteAttributeString("Mirror", parseTag[2]);
-                    //makexml.WriteAttributeString("Flip", parseTag[1]);
-                    //makexml.WriteAttributeString("Rotation", parseTag[0]);
-                    //makexml.WriteEndElement();
-
-                }
-            //Sort the array by the sequence number
-            List<RadiographProperties> SortedList = rap.OrderBy(o => o.GetSequenceNumber()).ToList();
-            foreach (RadiographProperties radiograph in SortedList) 
+            if (tb_TemplateName.Text == "")
             {
-                makexml.WriteStartElement("Image" + radiograph.GetSequenceNumber());
-                makexml.WriteAttributeString("SizeX", radiograph.GetSizeX().ToString());
-                makexml.WriteAttributeString("SizeY", radiograph.GetSizeY().ToString());
-                makexml.WriteAttributeString("PositionX", radiograph.GetPositionX().ToString());
-                makexml.WriteAttributeString("PositionY", radiograph.GetPositionY().ToString());
-                makexml.WriteAttributeString("Mirror", radiograph.Mirrored().ToString());
-                makexml.WriteAttributeString("Flip", radiograph.Flipped().ToString());
-                makexml.WriteAttributeString("Rotation", radiograph.Rotated().ToString());
-                makexml.WriteEndElement();
+                MessageBox.Show("Please Set a Template name.");
             }
+            else
+            {
+                int imgCount = 0;
+                foreach (Control c in pan_Template.Controls)
+                    if (c is PictureBox)
+                    {
+                        imgCount++;
+                        if (!seq_Set)
+                        {
+                            MessageBox.Show("Please Set the Capture Sequence before saving.");
+                            goto End;
+                        }
+                    }
 
-            makexml.WriteEndElement();
-            makexml.WriteEndElement();
-            makexml.WriteEndDocument();
-            makexml.Close();
-            MessageBox.Show("Template Saved Successfully.");
-            
-        End:
-            ;
+                //Tool is designed to be in the same directory as TwainCapture.
+                string saveDir = Directory.GetCurrentDirectory();
+                string saveFile = @"\" + tb_TemplateName.Text + ".xml";
+                //init settings for xml formatting
+                XmlWriterSettings settings = new XmlWriterSettings();
+                settings.Indent = true;
+                settings.OmitXmlDeclaration = true;
+                settings.NewLineOnAttributes = true;
+                //init writer object
+                XmlWriter makexml = XmlWriter.Create(saveDir + saveFile, settings);
+                makexml.WriteStartDocument();
+                makexml.WriteStartElement("Exam");
+                makexml.WriteAttributeString("ExamName", tb_TemplateName.Text);
+
+                makexml.WriteAttributeString("ImageCount", imgCount.ToString());
+                makexml.WriteStartElement("Layout");
+                string[] imageSequence = new string[imgCount]; //add images into array and then sort them by Image#
+                RadiographProperties[] dip = new RadiographProperties[imgCount];
+                List<RadiographProperties> rap = new List<RadiographProperties>();
+                int index = 0;
+                foreach (Control c in pan_Template.Controls)
+                    if (c is PictureBox)
+                    {
+
+
+                        string[] parseTag = c.Tag.ToString().Split('-');
+                        if (parseTag[0] == "True")
+                            parseTag[0] = "90";
+                        else
+                            parseTag[0] = "0";
+
+                        RadiographProperties cur_image = new RadiographProperties(c.TabIndex, c.Width, c.Height, c.Location.X, c.Location.Y, parseTag[2], parseTag[1], parseTag[0]);
+                        dip[index] = cur_image;
+                        rap.Add(cur_image);
+                        index++;
+                        //makexml.WriteStartElement("Image" + c.TabIndex);
+                        //makexml.WriteAttributeString("SizeX", c.Width.ToString());
+                        //makexml.WriteAttributeString("SizeY", c.Height.ToString());
+                        //makexml.WriteAttributeString("PositionX", c.Location.X.ToString());
+                        //makexml.WriteAttributeString("PositionY", c.Location.Y.ToString());
+                        //makexml.WriteAttributeString("Mirror", parseTag[2]);
+                        //makexml.WriteAttributeString("Flip", parseTag[1]);
+                        //makexml.WriteAttributeString("Rotation", parseTag[0]);
+                        //makexml.WriteEndElement();
+
+                    }
+                //Sort the array by the sequence number
+                List<RadiographProperties> SortedList = rap.OrderBy(o => o.GetSequenceNumber()).ToList();
+                foreach (RadiographProperties radiograph in SortedList)
+                {
+                    makexml.WriteStartElement("Image" + radiograph.GetSequenceNumber());
+                    makexml.WriteAttributeString("SizeX", radiograph.GetSizeX().ToString());
+                    makexml.WriteAttributeString("SizeY", radiograph.GetSizeY().ToString());
+                    makexml.WriteAttributeString("PositionX", radiograph.GetPositionX().ToString());
+                    makexml.WriteAttributeString("PositionY", radiograph.GetPositionY().ToString());
+                    makexml.WriteAttributeString("Mirror", radiograph.Mirrored().ToString());
+                    makexml.WriteAttributeString("Flip", radiograph.Flipped().ToString());
+                    makexml.WriteAttributeString("Rotation", radiograph.Rotated().ToString());
+                    makexml.WriteEndElement();
+                }
+
+                makexml.WriteEndElement();
+                makexml.WriteEndElement();
+                makexml.WriteEndDocument();
+                makexml.Close();
+                MessageBox.Show("Template Saved Successfully.");
+
+            End:
+                ;
+            }
         }
 
         /// <summary>

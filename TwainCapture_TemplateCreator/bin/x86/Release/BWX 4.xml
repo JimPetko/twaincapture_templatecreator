@@ -1,0 +1,38 @@
+﻿<Exam
+  ExamName="BWX 4"
+  ImageCount="4">
+  <Layout>
+    <Image1
+      SizeX="120"
+      SizeY="90"
+      PositionX="220"
+      PositionY="220"
+      Mirror="True"
+      Flip="False"
+      Rotation="90" />
+    <Image2
+      SizeX="120"
+      SizeY="90"
+      PositionX="350"
+      PositionY="220"
+      Mirror="True"
+      Flip="False"
+      Rotation="90" />
+    <Image3
+      SizeX="120"
+      SizeY="90"
+      PositionX="610"
+      PositionY="220"
+      Mirror="True"
+      Flip="True"
+      Rotation="90" />
+    <Image4
+      SizeX="120"
+      SizeY="90"
+      PositionX="480"
+      PositionY="220"
+      Mirror="True"
+      Flip="True"
+      Rotation="90" />
+  </Layout>
+</Exam>
