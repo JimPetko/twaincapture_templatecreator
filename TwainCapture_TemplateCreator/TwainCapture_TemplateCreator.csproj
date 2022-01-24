@@ -118,7 +118,7 @@
     <None Include="Resources\Sequence.png" />
     <None Include="Resources\setSeq_red.png" />
     <None Include="Resources\save.png" />
-    <None Include="Resources\grid5.png" />
+    <None Include="Resources\gridB.png" />
     <Content Include="X-Ray.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
