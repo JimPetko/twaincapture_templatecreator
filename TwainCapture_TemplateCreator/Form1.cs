@@ -130,6 +130,7 @@ namespace TwainCapture_TemplateCreator
                 contextMenu.Show(this, new Point(e.X + grabbed.Left - clickOffsetX, e.Y + grabbed.Top - clickOffsetY));
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             if (b_isSettingSequence && seq_Index <= pan_Template.Controls.Count && grabbed.TabIndex <= pan_Template.Controls.Count)
             {
@@ -149,6 +150,10 @@ namespace TwainCapture_TemplateCreator
             if (grabbed.Controls.Count == 0)
             {
 >>>>>>> inDev
+=======
+            if (grabbed.Controls.Count == 0)
+            {
+>>>>>>> inDev
                 if (b_isSettingSequence && seq_Index <= pan_Template.Controls.Count && grabbed.TabIndex <= pan_Template.Controls.Count)
                 {
                     grabbed.TabIndex = seq_Index;
@@ -164,7 +169,10 @@ namespace TwainCapture_TemplateCreator
                     lab.BringToFront();
                 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> inDev
 =======
 >>>>>>> inDev
             }
@@ -253,6 +261,7 @@ namespace TwainCapture_TemplateCreator
         private void btn_SaveTemplate_Click(object sender, EventArgs e)
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             if (tb_TemplateName.Text == "")
             {
@@ -275,6 +284,15 @@ namespace TwainCapture_TemplateCreator
             {
                 MessageBox.Show("Please Set a Template nameensure that there are Images present in the Layout.");
 >>>>>>> inDev
+=======
+            if (pan_Template.Controls.Count == 0)
+            {
+                tb_TemplateName.Text = "";
+            }
+            if (tb_TemplateName.Text == "")
+            {
+                MessageBox.Show("Please Set a Template nameensure that there are Images present in the Layout.");
+>>>>>>> inDev
             }
             else
             {
@@ -283,11 +301,15 @@ namespace TwainCapture_TemplateCreator
                     if (c is PictureBox)
                     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                         imgCount++;
 =======
 
 >>>>>>> Stashed changes
+=======
+
+>>>>>>> inDev
 =======
 
 >>>>>>> inDev
@@ -335,6 +357,7 @@ namespace TwainCapture_TemplateCreator
                         rap.Add(cur_image);
                         index++;
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                         //makexml.WriteStartElement("Image" + c.TabIndex);
                         //makexml.WriteAttributeString("SizeX", c.Width.ToString());
@@ -348,6 +371,9 @@ namespace TwainCapture_TemplateCreator
 =======
 
 >>>>>>> Stashed changes
+=======
+
+>>>>>>> inDev
 =======
 
 >>>>>>> inDev

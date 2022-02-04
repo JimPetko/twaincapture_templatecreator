@@ -32,6 +32,7 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 [assembly: AssemblyVersion("0.1.0.16")]
 [assembly: AssemblyFileVersion("0.1.0.16")]
@@ -39,6 +40,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("1.0.0.4")]
 [assembly: AssemblyFileVersion("1.0.0.4")]
 >>>>>>> Stashed changes
+=======
+[assembly: AssemblyVersion("1.0.0.4")]
+[assembly: AssemblyFileVersion("1.0.0.4")]
+>>>>>>> inDev
 =======
 [assembly: AssemblyVersion("1.0.0.4")]
 [assembly: AssemblyFileVersion("1.0.0.4")]
