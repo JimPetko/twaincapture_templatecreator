@@ -126,7 +126,8 @@ namespace TwainCapture_TemplateCreator
 
                 contextMenu.Show(this, new Point(e.X + grabbed.Left - clickOffsetX, e.Y + grabbed.Top - clickOffsetY));
             }
-            if(grabbed.Controls.Count == 0) {
+            if (grabbed.Controls.Count == 0)
+            {
                 if (b_isSettingSequence && seq_Index <= pan_Template.Controls.Count && grabbed.TabIndex <= pan_Template.Controls.Count)
                 {
                     grabbed.TabIndex = seq_Index;
@@ -224,7 +225,7 @@ namespace TwainCapture_TemplateCreator
         /// <param name="e"></param>
         private void btn_SaveTemplate_Click(object sender, EventArgs e)
         {
-            if (pan_Template.Controls.Count == 0) 
+            if (pan_Template.Controls.Count == 0)
             {
                 tb_TemplateName.Text = "";
             }
@@ -238,7 +239,7 @@ namespace TwainCapture_TemplateCreator
                 foreach (Control c in pan_Template.Controls)
                     if (c is PictureBox)
                     {
-                        
+
                         if (!seq_Set)
                         {
                             MessageBox.Show("Please Set the Capture Sequence before saving.");
@@ -282,7 +283,7 @@ namespace TwainCapture_TemplateCreator
                         dip[index] = cur_image;
                         rap.Add(cur_image);
                         index++;
-                        
+
 
                     }
                 //Sort the array by the sequence number
@@ -386,5 +387,5 @@ namespace TwainCapture_TemplateCreator
         }
 
     }
-    
+
 }
