@@ -33,6 +33,7 @@ namespace TwainCapture_TemplateCreator
                 c.MouseUp += new MouseEventHandler(pan_Template_MouseUp);
                 c.MouseDown += new MouseEventHandler(pan_Template_MouseDown);
             }
+            tb_TemplateName.Text = "Insert Template Name";
         }
 
         /// <summary>
@@ -94,6 +95,7 @@ namespace TwainCapture_TemplateCreator
             }
         }
 
+
         /// <summary>
         /// Clears all controls from the template panel
         /// </summary>
@@ -103,6 +105,7 @@ namespace TwainCapture_TemplateCreator
         {
             pan_Template.Controls.Clear();
             seq_Set = false;
+            tb_TemplateName.Text = "";
 
         }
 
@@ -126,6 +129,7 @@ namespace TwainCapture_TemplateCreator
 
                 contextMenu.Show(this, new Point(e.X + grabbed.Left - clickOffsetX, e.Y + grabbed.Top - clickOffsetY));
             }
+<<<<<<< Updated upstream
             if (b_isSettingSequence && seq_Index <= pan_Template.Controls.Count && grabbed.TabIndex <= pan_Template.Controls.Count)
             {
                 grabbed.TabIndex = seq_Index;
@@ -137,6 +141,24 @@ namespace TwainCapture_TemplateCreator
                 lab.Visible = true;
                 lab.Location = new Point(grabbed.Location.X + 5, grabbed.Location.Y + 5);
                 lab.BringToFront();
+=======
+            if (grabbed.Controls.Count == 0)
+            {
+                if (b_isSettingSequence && seq_Index <= pan_Template.Controls.Count && grabbed.TabIndex <= pan_Template.Controls.Count)
+                {
+                    grabbed.TabIndex = seq_Index;
+                    seq_Index++;
+                    Label lab = new Label();
+                    lab.Size = new Size(20, 20);
+                    grabbed.Controls.Add(lab);
+
+                    lab.Text = grabbed.TabIndex.ToString();
+                    lab.Visible = true;
+                    lab.Dock = DockStyle.Top;
+                    //lab.Location = new Point(grabbed.Location.X + 5, grabbed.Location.Y + 5);
+                    lab.BringToFront();
+                }
+>>>>>>> Stashed changes
             }
         }
 
@@ -198,6 +220,7 @@ namespace TwainCapture_TemplateCreator
                 b_isSettingSequence = true;
                 pbx_SetSequence.Image = TwainCapture_TemplateCreator.Properties.Resources.setSeq_red;
                 lab_Sequence.Text = " - Save Sequence";
+                seq_Set = false;
             }
             else
             {
@@ -205,6 +228,7 @@ namespace TwainCapture_TemplateCreator
                 pbx_SetSequence.Image = TwainCapture_TemplateCreator.Properties.Resources.Sequence;
                 seq_Index = 1;
                 lab_Sequence.Text = " - Set Sequence";
+                seq_Set = true;
             }
         }
 
@@ -215,9 +239,19 @@ namespace TwainCapture_TemplateCreator
         /// <param name="e"></param>
         private void btn_SaveTemplate_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             if (tb_TemplateName.Text == "")
             {
                 MessageBox.Show("Please Set a Template name.");
+=======
+            if (pan_Template.Controls.Count == 0)
+            {
+                tb_TemplateName.Text = "";
+            }
+            if (tb_TemplateName.Text == "")
+            {
+                MessageBox.Show("Please Set a Template name AND ensure that there are Images present in the Layout.");
+>>>>>>> Stashed changes
             }
             else
             {
@@ -225,7 +259,11 @@ namespace TwainCapture_TemplateCreator
                 foreach (Control c in pan_Template.Controls)
                     if (c is PictureBox)
                     {
+<<<<<<< Updated upstream
                         imgCount++;
+=======
+
+>>>>>>> Stashed changes
                         if (!seq_Set)
                         {
                             MessageBox.Show("Please Set the Capture Sequence before saving.");
@@ -268,6 +306,7 @@ namespace TwainCapture_TemplateCreator
                         dip[index] = cur_image;
                         rap.Add(cur_image);
                         index++;
+<<<<<<< Updated upstream
                         //makexml.WriteStartElement("Image" + c.TabIndex);
                         //makexml.WriteAttributeString("SizeX", c.Width.ToString());
                         //makexml.WriteAttributeString("SizeY", c.Height.ToString());
@@ -277,6 +316,9 @@ namespace TwainCapture_TemplateCreator
                         //makexml.WriteAttributeString("Flip", parseTag[1]);
                         //makexml.WriteAttributeString("Rotation", parseTag[0]);
                         //makexml.WriteEndElement();
+=======
+
+>>>>>>> Stashed changes
 
                     }
                 //Sort the array by the sequence number
@@ -380,5 +422,5 @@ namespace TwainCapture_TemplateCreator
         }
 
     }
-    
+
 }
