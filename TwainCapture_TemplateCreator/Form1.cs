@@ -120,7 +120,7 @@ namespace TwainCapture_TemplateCreator
             grabbed = sender as PictureBox;
             clickOffsetX = e.X;
             clickOffsetY = e.Y;
-
+            Console.WriteLine(grabbed.TabIndex.ToString());
             if (e.Button == MouseButtons.Right)
             {
                 ContextMenu contextMenu = new ContextMenu();
@@ -129,6 +129,7 @@ namespace TwainCapture_TemplateCreator
 
                 contextMenu.Show(this, new Point(e.X + grabbed.Left - clickOffsetX, e.Y + grabbed.Top - clickOffsetY));
             }
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             if (b_isSettingSequence && seq_Index <= pan_Template.Controls.Count && grabbed.TabIndex <= pan_Template.Controls.Count)
             {
@@ -144,6 +145,10 @@ namespace TwainCapture_TemplateCreator
 =======
             if (grabbed.Controls.Count == 0)
             {
+=======
+            if (grabbed.Controls.Count == 0)
+            {
+>>>>>>> inDev
                 if (b_isSettingSequence && seq_Index <= pan_Template.Controls.Count && grabbed.TabIndex <= pan_Template.Controls.Count)
                 {
                     grabbed.TabIndex = seq_Index;
@@ -158,7 +163,10 @@ namespace TwainCapture_TemplateCreator
                     //lab.Location = new Point(grabbed.Location.X + 5, grabbed.Location.Y + 5);
                     lab.BringToFront();
                 }
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> inDev
             }
         }
 
@@ -232,6 +240,11 @@ namespace TwainCapture_TemplateCreator
             }
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+            btn_Clear_Click(sender, e);
+        }
+
         /// <summary>
         /// Parses the current Template into an XML file for TwainCapture to read as an available template.
         /// </summary>
@@ -239,6 +252,7 @@ namespace TwainCapture_TemplateCreator
         /// <param name="e"></param>
         private void btn_SaveTemplate_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             if (tb_TemplateName.Text == "")
             {
@@ -252,6 +266,15 @@ namespace TwainCapture_TemplateCreator
             {
                 MessageBox.Show("Please Set a Template name AND ensure that there are Images present in the Layout.");
 >>>>>>> Stashed changes
+=======
+            if (pan_Template.Controls.Count == 0)
+            {
+                tb_TemplateName.Text = "";
+            }
+            if (tb_TemplateName.Text == "")
+            {
+                MessageBox.Show("Please Set a Template nameensure that there are Images present in the Layout.");
+>>>>>>> inDev
             }
             else
             {
@@ -259,16 +282,21 @@ namespace TwainCapture_TemplateCreator
                 foreach (Control c in pan_Template.Controls)
                     if (c is PictureBox)
                     {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                         imgCount++;
 =======
 
 >>>>>>> Stashed changes
+=======
+
+>>>>>>> inDev
                         if (!seq_Set)
                         {
                             MessageBox.Show("Please Set the Capture Sequence before saving.");
                             goto End;
                         }
+                        imgCount++;
                     }
 
                 //Tool is designed to be in the same directory as TwainCapture.
@@ -306,6 +334,7 @@ namespace TwainCapture_TemplateCreator
                         dip[index] = cur_image;
                         rap.Add(cur_image);
                         index++;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                         //makexml.WriteStartElement("Image" + c.TabIndex);
                         //makexml.WriteAttributeString("SizeX", c.Width.ToString());
@@ -319,6 +348,9 @@ namespace TwainCapture_TemplateCreator
 =======
 
 >>>>>>> Stashed changes
+=======
+
+>>>>>>> inDev
 
                     }
                 //Sort the array by the sequence number

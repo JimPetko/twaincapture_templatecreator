@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TwainCapture_TemplateCreator")]
-[assembly: AssemblyDescription("Template creation tool for TwainCapture")]
+[assembly: AssemblyTitle("TwainCapture Template Creation Tool")]
+[assembly: AssemblyDescription("Template creation tool for Digital Doc's TwainCapture")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Digital Doc")]
-[assembly: AssemblyProduct("TwainCapture_TemplateCreator")]
+[assembly: AssemblyProduct("TwainCapture Template Creation Tool")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -31,6 +31,7 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 [assembly: AssemblyVersion("0.1.0.16")]
 [assembly: AssemblyFileVersion("0.1.0.16")]
@@ -38,3 +39,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("1.0.0.4")]
 [assembly: AssemblyFileVersion("1.0.0.4")]
 >>>>>>> Stashed changes
+=======
+[assembly: AssemblyVersion("1.0.0.4")]
+[assembly: AssemblyFileVersion("1.0.0.4")]
+>>>>>>> inDev
