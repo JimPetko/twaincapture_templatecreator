@@ -42,7 +42,7 @@ namespace TwainCapture_TemplateCreator
         /// <param name="e"></param>
         private void pbx_NewHorizBox_Click(object sender, EventArgs e)
         {
-            pan_Template.Controls.Add(PicBox(new Size(90, 120), boxLocX, boxLocY, 90, true, true, true));
+            pan_Template.Controls.Add(PicBox(new Size(90, 120), boxLocX, boxLocY, 90, true, true, true, "R"));
             boxLocX += 25;
         }
 
@@ -53,7 +53,7 @@ namespace TwainCapture_TemplateCreator
         /// <param name="e"></param>
         private void pbx_NewRightBW_Click(object sender, EventArgs e)
         {
-            pan_Template.Controls.Add(PicBox(new Size(90, 120), boxLocX, boxLocY, 90, true, false, true));
+            pan_Template.Controls.Add(PicBox(new Size(90, 120), boxLocX, boxLocY, 90, true, false, false, "L"));
             boxLocX += 25;
             if (boxLocX >= pan_Template.Size.Width - 90)
             {
@@ -69,7 +69,7 @@ namespace TwainCapture_TemplateCreator
         /// <param name="e"></param>
         private void pbx_NewTopPA_Click(object sender, EventArgs e)
         {
-            pan_Template.Controls.Add(PicBox(new Size(90, 120), boxLocX, boxLocY, 0, false, false, false));
+            pan_Template.Controls.Add(PicBox(new Size(90, 120), boxLocX, boxLocY, 0, false, false, false, "U"));
             boxLocX += 25;
             if (boxLocX >= pan_Template.Size.Width - 90)
             {
@@ -85,7 +85,7 @@ namespace TwainCapture_TemplateCreator
         /// <param name="e"></param>
         private void pbx_NewBotPA_Click(object sender, EventArgs e)
         {
-            pan_Template.Controls.Add(PicBox(new Size(90, 120), boxLocX, boxLocY, 0, false, true, true));
+            pan_Template.Controls.Add(PicBox(new Size(90, 120), boxLocX, boxLocY, 0, false, true, true, "D"));
             boxLocX += 25;
             if (boxLocX >= pan_Template.Size.Width - 90)
             {
@@ -203,6 +203,7 @@ namespace TwainCapture_TemplateCreator
                 b_isSettingSequence = true;
                 pbx_SetSequence.Image = TwainCapture_TemplateCreator.Properties.Resources.setSeq_red;
                 lab_Sequence.Text = " - Save Sequence";
+                seq_Set = true;
             }
             else
             {
@@ -323,7 +324,7 @@ namespace TwainCapture_TemplateCreator
         /// <param name="flipped"></param>
         /// <param name="mirror"></param>
         /// <returns></returns>
-        private PictureBox PicBox(Size size, int coordX, int coordY, int rotation, bool horz, bool flipped, bool mirror)
+        private PictureBox PicBox(Size size, int coordX, int coordY, int rotation, bool horz, bool flipped, bool mirror, string direction)
         {
             Image img = TwainCapture_TemplateCreator.Properties.Resources.SensorOrient;
             PictureBox pb = new PictureBox();
@@ -338,12 +339,12 @@ namespace TwainCapture_TemplateCreator
             }
             if (horz)
             {
-                if (flipped)//pb.Image = SensorImage top pointing =>>
+                if (direction=="R")//pb.Image = SensorImage top pointing =>>
                 {
                     img.RotateFlip(RotateFlipType.Rotate90FlipNone);
                     pb.Image = img;
                 }
-                else //pb.Image = SensorImage top pointing <<=
+                if(direction=="L") //pb.Image = SensorImage top pointing <<=
                 {
                     img.RotateFlip(RotateFlipType.Rotate90FlipX);
                     pb.Image = img;
