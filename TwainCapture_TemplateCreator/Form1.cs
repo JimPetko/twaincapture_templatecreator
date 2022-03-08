@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -16,6 +17,7 @@ namespace TwainCapture_TemplateCreator
         private bool b_isSettingSequence = false;
         private int seq_Index = 1;
         private bool seq_Set = false;
+        string selectedExam = "";
 
         /// <summary>
         /// Initialization of the Form and controls.
@@ -33,7 +35,18 @@ namespace TwainCapture_TemplateCreator
                 c.MouseUp += new MouseEventHandler(pan_Template_MouseUp);
                 c.MouseDown += new MouseEventHandler(pan_Template_MouseDown);
             }
+<<<<<<< HEAD
             tb_TemplateName.Text = "Insert Template Name";
+=======
+            string[] files = Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86)+ "\\Digital Doc\\TwainCapture\\Templates");
+            foreach (string file in files) 
+            {
+                if(Path.GetFileName(file).Contains(".xml"))
+                    cb_ExistingExams.Items.Add(Path.GetFileNameWithoutExtension(file));
+                selectedExam = Path.GetFileName(file);
+            }
+
+>>>>>>> 2df89697a8738fed256d8e31d50afd9ee3118a0d
         }
 
         /// <summary>
@@ -43,7 +56,7 @@ namespace TwainCapture_TemplateCreator
         /// <param name="e"></param>
         private void pbx_NewHorizBox_Click(object sender, EventArgs e)
         {
-            pan_Template.Controls.Add(PicBox(new Size(90, 120), boxLocX, boxLocY, 90, true, true, true));
+            pan_Template.Controls.Add(PicBox(new Size(90, 120), boxLocX, boxLocY, 90, true, true, true, "R"));
             boxLocX += 25;
         }
 
@@ -54,7 +67,7 @@ namespace TwainCapture_TemplateCreator
         /// <param name="e"></param>
         private void pbx_NewRightBW_Click(object sender, EventArgs e)
         {
-            pan_Template.Controls.Add(PicBox(new Size(90, 120), boxLocX, boxLocY, 90, true, false, true));
+            pan_Template.Controls.Add(PicBox(new Size(90, 120), boxLocX, boxLocY, 90, true, false, false, "L"));
             boxLocX += 25;
             if (boxLocX >= pan_Template.Size.Width - 90)
             {
@@ -70,7 +83,7 @@ namespace TwainCapture_TemplateCreator
         /// <param name="e"></param>
         private void pbx_NewTopPA_Click(object sender, EventArgs e)
         {
-            pan_Template.Controls.Add(PicBox(new Size(90, 120), boxLocX, boxLocY, 0, false, false, false));
+            pan_Template.Controls.Add(PicBox(new Size(90, 120), boxLocX, boxLocY, 0, false, false, false, "U"));
             boxLocX += 25;
             if (boxLocX >= pan_Template.Size.Width - 90)
             {
@@ -86,7 +99,7 @@ namespace TwainCapture_TemplateCreator
         /// <param name="e"></param>
         private void pbx_NewBotPA_Click(object sender, EventArgs e)
         {
-            pan_Template.Controls.Add(PicBox(new Size(90, 120), boxLocX, boxLocY, 0, false, true, true));
+            pan_Template.Controls.Add(PicBox(new Size(90, 120), boxLocX, boxLocY, 0, false, true, true, "D"));
             boxLocX += 25;
             if (boxLocX >= pan_Template.Size.Width - 90)
             {
@@ -131,6 +144,7 @@ namespace TwainCapture_TemplateCreator
             }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             if (b_isSettingSequence && seq_Index <= pan_Template.Controls.Count && grabbed.TabIndex <= pan_Template.Controls.Count)
             {
@@ -154,6 +168,10 @@ namespace TwainCapture_TemplateCreator
             if (grabbed.Controls.Count == 0)
             {
 >>>>>>> inDev
+=======
+            if (grabbed.Controls.Count == 0)
+            {
+>>>>>>> 2df89697a8738fed256d8e31d50afd9ee3118a0d
                 if (b_isSettingSequence && seq_Index <= pan_Template.Controls.Count && grabbed.TabIndex <= pan_Template.Controls.Count)
                 {
                     grabbed.TabIndex = seq_Index;
@@ -170,11 +188,14 @@ namespace TwainCapture_TemplateCreator
                 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Stashed changes
 =======
 >>>>>>> inDev
 =======
 >>>>>>> inDev
+=======
+>>>>>>> 2df89697a8738fed256d8e31d50afd9ee3118a0d
             }
         }
 
@@ -234,18 +255,185 @@ namespace TwainCapture_TemplateCreator
             if (!b_isSettingSequence)
             {
                 b_isSettingSequence = true;
+<<<<<<< HEAD
                 pbx_SetSequence.Image = TwainCapture_TemplateCreator.Properties.Resources.setSeq_red;
                 lab_Sequence.Text = " - Save Sequence";
                 seq_Set = false;
+=======
+                btn_SetSequence.Image = TwainCapture_TemplateCreator.Properties.Resources.setSeq_red25;
+                btn_SetSequence.Text = "Save Capture Sequence";
+                seq_Set = true;
+>>>>>>> 2df89697a8738fed256d8e31d50afd9ee3118a0d
             }
             else
             {
                 b_isSettingSequence = false;
-                pbx_SetSequence.Image = TwainCapture_TemplateCreator.Properties.Resources.Sequence;
+                btn_SetSequence.Image = TwainCapture_TemplateCreator.Properties.Resources.Sequence25;
                 seq_Index = 1;
+<<<<<<< HEAD
                 lab_Sequence.Text = " - Set Sequence";
                 seq_Set = true;
+=======
+                btn_SetSequence.Text = "Set Capture Sequence";
             }
+        }
+        /// <summary>
+        /// Clears Panel of all created Images
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void label2_Click(object sender, EventArgs e)
+        {
+            btn_Clear_Click(sender, e);
+        }
+
+
+
+
+        /// <summary>
+        /// Populate Panel with the exame selected in cb_ExistingExams.Text by parsing XML file
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        string[] lines = { };
+        private void btn_LoadMount_Click(object sender, EventArgs e)
+        {
+            pan_Template.Controls.Clear();
+            tb_TemplateName.Text = cb_ExistingExams.Text;
+            int rotation = 0;
+            bool horz = false;
+            string TemplatePath = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86)+@"\Digital Doc\TwainCapture\Templates\"+cb_ExistingExams.Text + ".xml";
+            lines = File.ReadAllLines(TemplatePath);
+            string direction = "";
+            
+            for(int i=0;i <= lines.Length-7;i++) 
+            {
+                
+                if (lines[i].Contains("Image") && !lines[i].Contains("Count"))
+                {
+                    Console.WriteLine(lines[i]);
+                    //todo: ~~~~~~~~~~~~~~~~~~~~EXTRACT THE INT FROM lines[i]+3) & lines[i]+4) FOR THE DRAW COORDINATES && PARSE DIRECTION FOR UP AND DOWN AS WELL~~~~~~~~~~~~~
+                    string xstr1 = lines[i + 3].Trim();
+                    string xstr2 = string.Empty;
+                    int xCoord = 0;
+                    var matches = Regex.Matches(xstr1, @"\d+");
+                    foreach (var match in matches)
+                        xstr2 += match;
+                    xCoord = int.Parse(xstr2);
+
+                    string ystr1 = lines[i + 4].Trim();
+                    string ystr2 = string.Empty;
+                    int yCoord = 0;
+                    var ymatches = Regex.Matches(ystr1, @"\d+");
+                    foreach (var match in ymatches)
+                        ystr2 += match;
+                    yCoord = int.Parse(ystr2);
+
+
+
+                    if (lines[i + 7].Contains("90")) {
+                        rotation = 90;
+                        horz = true;
+                    }
+                    else 
+                    {
+                        rotation = 0;
+                        horz = false;
+                        if (lines[i + 6].Contains("True"))
+                            direction = "D";
+                        else
+                            direction = "U";
+                    }
+                    if (horz && lines[i + 5].Contains("True"))
+                    {
+                        direction = "R";
+                    }
+                    else
+                        direction = "L";
+
+
+
+                    pan_Template.Controls.Add(PicBox(new Size(90, 120), xCoord, yCoord,rotation,horz, lines[i + 6].Contains("True"), lines[i + 5].Contains("True"),direction));
+                    Console.WriteLine(lines[i+1]);//SizeX
+                    Console.WriteLine(lines[i+2]);//SizeY
+                    Console.WriteLine(lines[i+3]);//PositionX
+                    Console.WriteLine(lines[i+4]);//PositionY
+                    Console.WriteLine(lines[i+5]);//Mirror
+                    Console.WriteLine(lines[i+6]);//Flip
+                    Console.WriteLine(lines[i+7]);//Rotation
+
+                }
+            }
+
+        }
+
+        /// <summary>
+        /// Delete the source file for the exam, prompt user if sure
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_DeleteExam_Click(object sender, EventArgs e)
+        {
+            if (DialogResult.Yes == MessageBox.Show("", "", MessageBoxButtons.YesNo, MessageBoxIcon.Hand)) 
+            {
+                File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86)+@"\Digital Doc\TwainCapture\Templates\"+cb_ExistingExams.Text + ".xml");
+                cb_ExistingExams.SelectedIndex = 0;
+            }
+
+        }
+
+        /// <summary>
+        /// Copies Files from Template directory to the User selected directory. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_Export_Click(object sender, EventArgs e)
+        {
+            using (var fbd = new FolderBrowserDialog())
+            {
+                DialogResult result = fbd.ShowDialog();
+                string[] sourceDir = Directory.GetFiles(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + @"\Digital Doc\TwainCapture\Templates\");
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    string[] files = Directory.GetFiles(fbd.SelectedPath);
+                    foreach (string file in sourceDir) 
+                    {
+                        string fileName = Path.GetFileName(file);
+
+                        if(Path.GetFileName(file).Contains(".xml"))
+                            File.Copy(file, fbd.SelectedPath+"\\"+fileName, true);
+                    }
+                    System.Windows.Forms.MessageBox.Show("Exams Exported", "Success!");
+                }
+            }
+        }
+
+        private void btn_Import_Click(object sender, EventArgs e)
+        {
+            using (var fbd = new FolderBrowserDialog())
+            {
+                DialogResult result = fbd.ShowDialog();
+                string destDir = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86) + @"\Digital Doc\TwainCapture\Templates\";
+                if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                {
+                    string[] files = Directory.GetFiles(fbd.SelectedPath);
+                    foreach (string file in files)
+                    {
+                        string fileName = Path.GetFileName(file);
+
+                        if (Path.GetFileName(file).Contains(".xml"))
+                            File.Copy(file, destDir + "\\" + fileName, true);
+                    }
+                    System.Windows.Forms.MessageBox.Show("Exams Imported", "Success!");
+                }
+>>>>>>> 2df89697a8738fed256d8e31d50afd9ee3118a0d
+            }
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -260,6 +448,7 @@ namespace TwainCapture_TemplateCreator
         /// <param name="e"></param>
         private void btn_SaveTemplate_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< Updated upstream
@@ -293,6 +482,15 @@ namespace TwainCapture_TemplateCreator
             {
                 MessageBox.Show("Please Set a Template nameensure that there are Images present in the Layout.");
 >>>>>>> inDev
+=======
+            if (pan_Template.Controls.Count == 0)
+            {
+                tb_TemplateName.Text = "";
+            }
+            if (tb_TemplateName.Text == "")
+            {
+                MessageBox.Show("Please Set a Template nameensure that there are Images present in the Layout.");
+>>>>>>> 2df89697a8738fed256d8e31d50afd9ee3118a0d
             }
             else
             {
@@ -300,6 +498,7 @@ namespace TwainCapture_TemplateCreator
                 foreach (Control c in pan_Template.Controls)
                     if (c is PictureBox)
                     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< Updated upstream
@@ -313,6 +512,9 @@ namespace TwainCapture_TemplateCreator
 =======
 
 >>>>>>> inDev
+=======
+
+>>>>>>> 2df89697a8738fed256d8e31d50afd9ee3118a0d
                         if (!seq_Set)
                         {
                             MessageBox.Show("Please Set the Capture Sequence before saving.");
@@ -358,6 +560,7 @@ namespace TwainCapture_TemplateCreator
                         index++;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
                         //makexml.WriteStartElement("Image" + c.TabIndex);
                         //makexml.WriteAttributeString("SizeX", c.Width.ToString());
@@ -377,6 +580,9 @@ namespace TwainCapture_TemplateCreator
 =======
 
 >>>>>>> inDev
+=======
+
+>>>>>>> 2df89697a8738fed256d8e31d50afd9ee3118a0d
 
                     }
                 //Sort the array by the sequence number
@@ -416,7 +622,7 @@ namespace TwainCapture_TemplateCreator
         /// <param name="flipped"></param>
         /// <param name="mirror"></param>
         /// <returns></returns>
-        private PictureBox PicBox(Size size, int coordX, int coordY, int rotation, bool horz, bool flipped, bool mirror)
+        private PictureBox PicBox(Size size, int coordX, int coordY, int rotation, bool horz, bool flipped, bool mirror, string direction)
         {
             Image img = TwainCapture_TemplateCreator.Properties.Resources.SensorOrient;
             PictureBox pb = new PictureBox();
@@ -431,12 +637,12 @@ namespace TwainCapture_TemplateCreator
             }
             if (horz)
             {
-                if (flipped)//pb.Image = SensorImage top pointing =>>
+                if (direction=="R")//pb.Image = SensorImage top pointing =>>
                 {
                     img.RotateFlip(RotateFlipType.Rotate90FlipNone);
                     pb.Image = img;
                 }
-                else //pb.Image = SensorImage top pointing <<=
+                if(direction=="L") //pb.Image = SensorImage top pointing <<=
                 {
                     img.RotateFlip(RotateFlipType.Rotate90FlipX);
                     pb.Image = img;

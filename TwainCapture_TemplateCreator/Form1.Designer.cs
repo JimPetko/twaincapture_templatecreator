@@ -36,20 +36,37 @@ namespace TwainCapture_TemplateCreator
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.tb_TemplateName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.lab_Sequence = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbx_SetSequence = new System.Windows.Forms.PictureBox();
             this.pbx_ClearImg = new System.Windows.Forms.PictureBox();
+=======
+            this.cb_ExistingExams = new System.Windows.Forms.ComboBox();
+            this.btn_LoadExam = new System.Windows.Forms.Button();
+            this.btn_DeleteExam = new System.Windows.Forms.Button();
+            this.btn_Export = new System.Windows.Forms.Button();
+            this.btn_Import = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_SetSequence = new System.Windows.Forms.Button();
+            this.btn_ClearPanel = new System.Windows.Forms.Button();
+            this.btn_SaveExam = new System.Windows.Forms.Button();
+>>>>>>> 2df89697a8738fed256d8e31d50afd9ee3118a0d
             this.pbx_NewBotPA = new System.Windows.Forms.PictureBox();
             this.pbx_NewTopPA = new System.Windows.Forms.PictureBox();
             this.pbx_NewRightBW = new System.Windows.Forms.PictureBox();
             this.pbx_NewLeftBW = new System.Windows.Forms.PictureBox();
             this.pan_Template = new System.Windows.Forms.Panel();
             this.pan_Tools.SuspendLayout();
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_SetSequence)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_ClearImg)).BeginInit();
+=======
+            this.panel1.SuspendLayout();
+>>>>>>> 2df89697a8738fed256d8e31d50afd9ee3118a0d
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewBotPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewTopPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewRightBW)).BeginInit();
@@ -64,7 +81,7 @@ namespace TwainCapture_TemplateCreator
             this.pan_Tools.Controls.Add(this.splitter1);
             this.pan_Tools.Controls.Add(this.pbx_NewRightBW);
             this.pan_Tools.Controls.Add(this.pbx_NewLeftBW);
-            this.pan_Tools.Location = new System.Drawing.Point(1022, 44);
+            this.pan_Tools.Location = new System.Drawing.Point(1022, 16);
             this.pan_Tools.Name = "pan_Tools";
             this.pan_Tools.Size = new System.Drawing.Size(147, 148);
             this.pan_Tools.TabIndex = 1;
@@ -80,9 +97,15 @@ namespace TwainCapture_TemplateCreator
             // tb_TemplateName
             // 
             this.tb_TemplateName.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+<<<<<<< HEAD
             this.tb_TemplateName.Location = new System.Drawing.Point(1026, 8);
             this.tb_TemplateName.Name = "tb_TemplateName";
             this.tb_TemplateName.Size = new System.Drawing.Size(124, 22);
+=======
+            this.tb_TemplateName.Location = new System.Drawing.Point(0, 12);
+            this.tb_TemplateName.Name = "tb_TemplateName";
+            this.tb_TemplateName.Size = new System.Drawing.Size(143, 22);
+>>>>>>> 2df89697a8738fed256d8e31d50afd9ee3118a0d
             this.tb_TemplateName.TabIndex = 3;
             this.tb_TemplateName.Text = "TemplateName";
             this.tb_TemplateName.Enter += new System.EventHandler(this.textBox1_Enter);
@@ -91,12 +114,17 @@ namespace TwainCapture_TemplateCreator
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+<<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(1026, 33);
+=======
+            this.label1.Location = new System.Drawing.Point(1026, 5);
+>>>>>>> 2df89697a8738fed256d8e31d50afd9ee3118a0d
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "Add Image";
             // 
+<<<<<<< HEAD
             // lab_Sequence
             // 
             this.lab_Sequence.AutoSize = true;
@@ -151,6 +179,114 @@ namespace TwainCapture_TemplateCreator
             this.pbx_ClearImg.TabIndex = 11;
             this.pbx_ClearImg.TabStop = false;
             this.pbx_ClearImg.Click += new System.EventHandler(this.btn_Clear_Click);
+=======
+            // cb_ExistingExams
+            // 
+            this.cb_ExistingExams.FormattingEnabled = true;
+            this.cb_ExistingExams.Location = new System.Drawing.Point(1029, 539);
+            this.cb_ExistingExams.Name = "cb_ExistingExams";
+            this.cb_ExistingExams.Size = new System.Drawing.Size(150, 21);
+            this.cb_ExistingExams.TabIndex = 17;
+            // 
+            // btn_LoadExam
+            // 
+            this.btn_LoadExam.Location = new System.Drawing.Point(1029, 566);
+            this.btn_LoadExam.Name = "btn_LoadExam";
+            this.btn_LoadExam.Size = new System.Drawing.Size(75, 23);
+            this.btn_LoadExam.TabIndex = 18;
+            this.btn_LoadExam.Text = "Edit Exam";
+            this.btn_LoadExam.UseVisualStyleBackColor = true;
+            this.btn_LoadExam.Click += new System.EventHandler(this.btn_LoadMount_Click);
+            // 
+            // btn_DeleteExam
+            // 
+            this.btn_DeleteExam.Location = new System.Drawing.Point(1029, 595);
+            this.btn_DeleteExam.Name = "btn_DeleteExam";
+            this.btn_DeleteExam.Size = new System.Drawing.Size(85, 23);
+            this.btn_DeleteExam.TabIndex = 19;
+            this.btn_DeleteExam.Text = "Delete Exam";
+            this.btn_DeleteExam.UseVisualStyleBackColor = true;
+            this.btn_DeleteExam.Click += new System.EventHandler(this.btn_DeleteExam_Click);
+            // 
+            // btn_Export
+            // 
+            this.btn_Export.Location = new System.Drawing.Point(1116, 642);
+            this.btn_Export.Name = "btn_Export";
+            this.btn_Export.Size = new System.Drawing.Size(53, 23);
+            this.btn_Export.TabIndex = 20;
+            this.btn_Export.Text = "Export";
+            this.btn_Export.UseVisualStyleBackColor = true;
+            this.btn_Export.Click += new System.EventHandler(this.btn_Export_Click);
+            // 
+            // btn_Import
+            // 
+            this.btn_Import.Location = new System.Drawing.Point(1057, 642);
+            this.btn_Import.Name = "btn_Import";
+            this.btn_Import.Size = new System.Drawing.Size(53, 23);
+            this.btn_Import.TabIndex = 21;
+            this.btn_Import.Text = "Import";
+            this.btn_Import.UseVisualStyleBackColor = true;
+            this.btn_Import.Click += new System.EventHandler(this.btn_Import_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.label3.Location = new System.Drawing.Point(1029, 225);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Save Exam";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btn_SaveExam);
+            this.panel1.Controls.Add(this.tb_TemplateName);
+            this.panel1.Location = new System.Drawing.Point(1024, 229);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(150, 110);
+            this.panel1.TabIndex = 23;
+            // 
+            // btn_SetSequence
+            // 
+            this.btn_SetSequence.Image = global::TwainCapture_TemplateCreator.Properties.Resources.Sequence25;
+            this.btn_SetSequence.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_SetSequence.Location = new System.Drawing.Point(1029, 181);
+            this.btn_SetSequence.Name = "btn_SetSequence";
+            this.btn_SetSequence.Size = new System.Drawing.Size(165, 27);
+            this.btn_SetSequence.TabIndex = 25;
+            this.btn_SetSequence.Text = "Set Capture Sequence";
+            this.btn_SetSequence.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SetSequence.UseVisualStyleBackColor = true;
+            this.btn_SetSequence.Click += new System.EventHandler(this.btn_SetSequence_Click);
+            // 
+            // btn_ClearPanel
+            // 
+            this.btn_ClearPanel.Image = global::TwainCapture_TemplateCreator.Properties.Resources.ClearImg25;
+            this.btn_ClearPanel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_ClearPanel.Location = new System.Drawing.Point(1029, 370);
+            this.btn_ClearPanel.Name = "btn_ClearPanel";
+            this.btn_ClearPanel.Size = new System.Drawing.Size(79, 27);
+            this.btn_ClearPanel.TabIndex = 24;
+            this.btn_ClearPanel.Text = "Clear All";
+            this.btn_ClearPanel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ClearPanel.UseVisualStyleBackColor = true;
+            this.btn_ClearPanel.Click += new System.EventHandler(this.btn_Clear_Click);
+            // 
+            // btn_SaveExam
+            // 
+            this.btn_SaveExam.Image = global::TwainCapture_TemplateCreator.Properties.Resources.save25;
+            this.btn_SaveExam.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_SaveExam.Location = new System.Drawing.Point(68, 40);
+            this.btn_SaveExam.Name = "btn_SaveExam";
+            this.btn_SaveExam.Size = new System.Drawing.Size(74, 27);
+            this.btn_SaveExam.TabIndex = 17;
+            this.btn_SaveExam.Text = "Save";
+            this.btn_SaveExam.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SaveExam.UseVisualStyleBackColor = true;
+            this.btn_SaveExam.Click += new System.EventHandler(this.btn_SaveTemplate_Click);
+>>>>>>> 2df89697a8738fed256d8e31d50afd9ee3118a0d
             // 
             // pbx_NewBotPA
             // 
@@ -215,26 +351,36 @@ namespace TwainCapture_TemplateCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 677);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.lab_Sequence);
-            this.Controls.Add(this.pbx_SetSequence);
-            this.Controls.Add(this.pbx_ClearImg);
+            this.ClientSize = new System.Drawing.Size(1205, 677);
+            this.Controls.Add(this.btn_SetSequence);
+            this.Controls.Add(this.btn_ClearPanel);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btn_Import);
+            this.Controls.Add(this.btn_Export);
+            this.Controls.Add(this.btn_DeleteExam);
+            this.Controls.Add(this.btn_LoadExam);
+            this.Controls.Add(this.cb_ExistingExams);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pan_Tools);
             this.Controls.Add(this.pan_Template);
-            this.Controls.Add(this.tb_TemplateName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Digital Doc X-Ray Template Creation Tool";
+<<<<<<< HEAD
             this.pan_Tools.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_SetSequence)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_ClearImg)).EndInit();
+=======
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.pan_Tools.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+>>>>>>> 2df89697a8738fed256d8e31d50afd9ee3118a0d
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewBotPA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewTopPA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewRightBW)).EndInit();
@@ -255,11 +401,16 @@ namespace TwainCapture_TemplateCreator
         private System.Windows.Forms.PictureBox pbx_NewBotPA;
         private System.Windows.Forms.PictureBox pbx_NewTopPA;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pbx_ClearImg;
-        private System.Windows.Forms.PictureBox pbx_SetSequence;
-        private System.Windows.Forms.Label lab_Sequence;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cb_ExistingExams;
+        private System.Windows.Forms.Button btn_LoadExam;
+        private System.Windows.Forms.Button btn_DeleteExam;
+        private System.Windows.Forms.Button btn_Export;
+        private System.Windows.Forms.Button btn_Import;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_SaveExam;
+        private System.Windows.Forms.Button btn_ClearPanel;
+        private System.Windows.Forms.Button btn_SetSequence;
     }
 }
 

@@ -33,6 +33,7 @@ using System.Runtime.InteropServices;
 // [assembly: AssemblyVersion("1.0.*")]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 [assembly: AssemblyVersion("0.1.0.16")]
 [assembly: AssemblyFileVersion("0.1.0.16")]
@@ -48,3 +49,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyVersion("1.0.0.4")]
 [assembly: AssemblyFileVersion("1.0.0.4")]
 >>>>>>> inDev
+=======
+[assembly: AssemblyVersion("1.0.0.6")]
+[assembly: AssemblyFileVersion("1.0.0.6")]
+>>>>>>> 2df89697a8738fed256d8e31d50afd9ee3118a0d
