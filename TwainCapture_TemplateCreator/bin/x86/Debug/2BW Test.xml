@@ -1,0 +1,22 @@
+﻿<Exam
+  ExamName="2BW Test"
+  ImageCount="2">
+  <Layout>
+    <Image1
+      SizeX="120"
+      SizeY="90"
+      PositionX="120"
+      PositionY="70"
+      Mirror="False"
+      Flip="False"
+      Rotation="90" />
+    <Image2
+      SizeX="120"
+      SizeY="90"
+      PositionX="250"
+      PositionY="70"
+      Mirror="True"
+      Flip="True"
+      Rotation="90" />
+  </Layout>
+</Exam>

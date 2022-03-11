@@ -33,7 +33,11 @@ namespace TwainCapture_TemplateCreator
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pan_Tools = new System.Windows.Forms.Panel();
+            this.pbx_NewBotPA = new System.Windows.Forms.PictureBox();
+            this.pbx_NewTopPA = new System.Windows.Forms.PictureBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
+            this.pbx_NewRightBW = new System.Windows.Forms.PictureBox();
+            this.pbx_NewLeftBW = new System.Windows.Forms.PictureBox();
             this.tb_TemplateName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cb_ExistingExams = new System.Windows.Forms.ComboBox();
@@ -43,20 +47,16 @@ namespace TwainCapture_TemplateCreator
             this.btn_Import = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_SaveExam = new System.Windows.Forms.Button();
             this.btn_SetSequence = new System.Windows.Forms.Button();
             this.btn_ClearPanel = new System.Windows.Forms.Button();
-            this.btn_SaveExam = new System.Windows.Forms.Button();
-            this.pbx_NewBotPA = new System.Windows.Forms.PictureBox();
-            this.pbx_NewTopPA = new System.Windows.Forms.PictureBox();
-            this.pbx_NewRightBW = new System.Windows.Forms.PictureBox();
-            this.pbx_NewLeftBW = new System.Windows.Forms.PictureBox();
             this.pan_Template = new System.Windows.Forms.Panel();
             this.pan_Tools.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewBotPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewTopPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewRightBW)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewLeftBW)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pan_Tools
@@ -72,6 +72,30 @@ namespace TwainCapture_TemplateCreator
             this.pan_Tools.Size = new System.Drawing.Size(147, 148);
             this.pan_Tools.TabIndex = 1;
             // 
+            // pbx_NewBotPA
+            // 
+            this.pbx_NewBotPA.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pbx_NewBotPA.Image = global::TwainCapture_TemplateCreator.Properties.Resources.SensorOrient;
+            this.pbx_NewBotPA.Location = new System.Drawing.Point(92, 78);
+            this.pbx_NewBotPA.Name = "pbx_NewBotPA";
+            this.pbx_NewBotPA.Size = new System.Drawing.Size(45, 60);
+            this.pbx_NewBotPA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_NewBotPA.TabIndex = 8;
+            this.pbx_NewBotPA.TabStop = false;
+            this.pbx_NewBotPA.Click += new System.EventHandler(this.pbx_NewBotPA_Click);
+            // 
+            // pbx_NewTopPA
+            // 
+            this.pbx_NewTopPA.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pbx_NewTopPA.Image = global::TwainCapture_TemplateCreator.Properties.Resources.SensorOrient;
+            this.pbx_NewTopPA.Location = new System.Drawing.Point(24, 78);
+            this.pbx_NewTopPA.Name = "pbx_NewTopPA";
+            this.pbx_NewTopPA.Size = new System.Drawing.Size(45, 60);
+            this.pbx_NewTopPA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_NewTopPA.TabIndex = 7;
+            this.pbx_NewTopPA.TabStop = false;
+            this.pbx_NewTopPA.Click += new System.EventHandler(this.pbx_NewTopPA_Click);
+            // 
             // splitter1
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
@@ -79,6 +103,31 @@ namespace TwainCapture_TemplateCreator
             this.splitter1.Size = new System.Drawing.Size(3, 144);
             this.splitter1.TabIndex = 6;
             this.splitter1.TabStop = false;
+            // 
+            // pbx_NewRightBW
+            // 
+            this.pbx_NewRightBW.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pbx_NewRightBW.Image = global::TwainCapture_TemplateCreator.Properties.Resources.SensorOrient;
+            this.pbx_NewRightBW.Location = new System.Drawing.Point(19, 3);
+            this.pbx_NewRightBW.Name = "pbx_NewRightBW";
+            this.pbx_NewRightBW.Size = new System.Drawing.Size(60, 45);
+            this.pbx_NewRightBW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_NewRightBW.TabIndex = 1;
+            this.pbx_NewRightBW.TabStop = false;
+            this.pbx_NewRightBW.Click += new System.EventHandler(this.pbx_NewRightBW_Click);
+            // 
+            // pbx_NewLeftBW
+            // 
+            this.pbx_NewLeftBW.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pbx_NewLeftBW.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbx_NewLeftBW.Image = global::TwainCapture_TemplateCreator.Properties.Resources.SensorOrient;
+            this.pbx_NewLeftBW.Location = new System.Drawing.Point(85, 3);
+            this.pbx_NewLeftBW.Name = "pbx_NewLeftBW";
+            this.pbx_NewLeftBW.Size = new System.Drawing.Size(60, 45);
+            this.pbx_NewLeftBW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbx_NewLeftBW.TabIndex = 0;
+            this.pbx_NewLeftBW.TabStop = false;
+            this.pbx_NewLeftBW.Click += new System.EventHandler(this.pbx_NewHorizBox_Click);
             // 
             // tb_TemplateName
             // 
@@ -168,6 +217,19 @@ namespace TwainCapture_TemplateCreator
             this.panel1.Size = new System.Drawing.Size(150, 110);
             this.panel1.TabIndex = 23;
             // 
+            // btn_SaveExam
+            // 
+            this.btn_SaveExam.Image = global::TwainCapture_TemplateCreator.Properties.Resources.save25;
+            this.btn_SaveExam.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_SaveExam.Location = new System.Drawing.Point(68, 40);
+            this.btn_SaveExam.Name = "btn_SaveExam";
+            this.btn_SaveExam.Size = new System.Drawing.Size(74, 27);
+            this.btn_SaveExam.TabIndex = 17;
+            this.btn_SaveExam.Text = "Save";
+            this.btn_SaveExam.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_SaveExam.UseVisualStyleBackColor = true;
+            this.btn_SaveExam.Click += new System.EventHandler(this.btn_SaveTemplate_Click);
+            // 
             // btn_SetSequence
             // 
             this.btn_SetSequence.Image = global::TwainCapture_TemplateCreator.Properties.Resources.Sequence25;
@@ -194,72 +256,10 @@ namespace TwainCapture_TemplateCreator
             this.btn_ClearPanel.UseVisualStyleBackColor = true;
             this.btn_ClearPanel.Click += new System.EventHandler(this.btn_Clear_Click);
             // 
-            // btn_SaveExam
-            // 
-            this.btn_SaveExam.Image = global::TwainCapture_TemplateCreator.Properties.Resources.save25;
-            this.btn_SaveExam.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_SaveExam.Location = new System.Drawing.Point(68, 40);
-            this.btn_SaveExam.Name = "btn_SaveExam";
-            this.btn_SaveExam.Size = new System.Drawing.Size(74, 27);
-            this.btn_SaveExam.TabIndex = 17;
-            this.btn_SaveExam.Text = "Save";
-            this.btn_SaveExam.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_SaveExam.UseVisualStyleBackColor = true;
-            this.btn_SaveExam.Click += new System.EventHandler(this.btn_SaveTemplate_Click);
-            // 
-            // pbx_NewBotPA
-            // 
-            this.pbx_NewBotPA.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pbx_NewBotPA.Image = global::TwainCapture_TemplateCreator.Properties.Resources.SensorOrient;
-            this.pbx_NewBotPA.Location = new System.Drawing.Point(92, 78);
-            this.pbx_NewBotPA.Name = "pbx_NewBotPA";
-            this.pbx_NewBotPA.Size = new System.Drawing.Size(45, 60);
-            this.pbx_NewBotPA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbx_NewBotPA.TabIndex = 8;
-            this.pbx_NewBotPA.TabStop = false;
-            this.pbx_NewBotPA.Click += new System.EventHandler(this.pbx_NewBotPA_Click);
-            // 
-            // pbx_NewTopPA
-            // 
-            this.pbx_NewTopPA.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pbx_NewTopPA.Image = global::TwainCapture_TemplateCreator.Properties.Resources.SensorOrient;
-            this.pbx_NewTopPA.Location = new System.Drawing.Point(24, 78);
-            this.pbx_NewTopPA.Name = "pbx_NewTopPA";
-            this.pbx_NewTopPA.Size = new System.Drawing.Size(45, 60);
-            this.pbx_NewTopPA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbx_NewTopPA.TabIndex = 7;
-            this.pbx_NewTopPA.TabStop = false;
-            this.pbx_NewTopPA.Click += new System.EventHandler(this.pbx_NewTopPA_Click);
-            // 
-            // pbx_NewRightBW
-            // 
-            this.pbx_NewRightBW.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pbx_NewRightBW.Image = global::TwainCapture_TemplateCreator.Properties.Resources.SensorOrient;
-            this.pbx_NewRightBW.Location = new System.Drawing.Point(19, 3);
-            this.pbx_NewRightBW.Name = "pbx_NewRightBW";
-            this.pbx_NewRightBW.Size = new System.Drawing.Size(60, 45);
-            this.pbx_NewRightBW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbx_NewRightBW.TabIndex = 1;
-            this.pbx_NewRightBW.TabStop = false;
-            this.pbx_NewRightBW.Click += new System.EventHandler(this.pbx_NewRightBW_Click);
-            // 
-            // pbx_NewLeftBW
-            // 
-            this.pbx_NewLeftBW.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pbx_NewLeftBW.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbx_NewLeftBW.Image = global::TwainCapture_TemplateCreator.Properties.Resources.SensorOrient;
-            this.pbx_NewLeftBW.Location = new System.Drawing.Point(85, 3);
-            this.pbx_NewLeftBW.Name = "pbx_NewLeftBW";
-            this.pbx_NewLeftBW.Size = new System.Drawing.Size(60, 45);
-            this.pbx_NewLeftBW.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbx_NewLeftBW.TabIndex = 0;
-            this.pbx_NewLeftBW.TabStop = false;
-            this.pbx_NewLeftBW.Click += new System.EventHandler(this.pbx_NewHorizBox_Click);
-            // 
             // pan_Template
             // 
             this.pan_Template.BackColor = System.Drawing.Color.Gray;
-            this.pan_Template.BackgroundImage = global::TwainCapture_TemplateCreator.Properties.Resources.gridB;
+            this.pan_Template.BackgroundImage = global::TwainCapture_TemplateCreator.Properties.Resources.gridC;
             this.pan_Template.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pan_Template.Location = new System.Drawing.Point(2, 3);
             this.pan_Template.Name = "pan_Template";
@@ -291,12 +291,12 @@ namespace TwainCapture_TemplateCreator
             this.Text = "Digital Doc X-Ray Template Creation Tool";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pan_Tools.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewBotPA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewTopPA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewRightBW)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbx_NewLeftBW)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

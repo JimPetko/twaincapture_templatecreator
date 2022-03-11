@@ -12,7 +12,6 @@ C:\Users\JPetko\Repos\Blu\twaincapture_templatecreator\TwainCapture_TemplateCrea
 C:\Users\JPetko\Repos\Blu\twaincapture_templatecreator\TwainCapture_TemplateCreator\bin\x86\Debug\TwainCapture_TemplateCreator.exe
 C:\Users\JPetko\Repos\Blu\twaincapture_templatecreator\TwainCapture_TemplateCreator\bin\x86\Debug\TwainCapture_TemplateCreator.pdb
 C:\Users\JPetko\Repos\Blu\twaincapture_templatecreator\TwainCapture_TemplateCreator\obj\x86\Debug\TwainCapture_TemplateCreator.csproj.AssemblyReference.cache
-C:\Users\JPetko\Repos\Blu\twaincapture_templatecreator\TwainCapture_TemplateCreator\obj\x86\Debug\TwainCapture_TemplateCreator.csproj.SuggestedBindingRedirects.cache
 C:\Users\JPetko\Repos\Blu\twaincapture_templatecreator\TwainCapture_TemplateCreator\obj\x86\Debug\TwainCapture_TemplateCreator.Form1.resources
 C:\Users\JPetko\Repos\Blu\twaincapture_templatecreator\TwainCapture_TemplateCreator\obj\x86\Debug\TwainCapture_TemplateCreator.Properties.Resources.resources
 C:\Users\JPetko\Repos\Blu\twaincapture_templatecreator\TwainCapture_TemplateCreator\obj\x86\Debug\TwainCapture_TemplateCreator.csproj.GenerateResource.cache

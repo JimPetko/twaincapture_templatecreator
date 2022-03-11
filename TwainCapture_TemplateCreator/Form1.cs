@@ -244,6 +244,13 @@ namespace TwainCapture_TemplateCreator
         string[] lines = { };
         private void btn_LoadMount_Click(object sender, EventArgs e)
         {
+            if (cb_ExistingExams.SelectedValue == string.Empty || cb_ExistingExams.SelectedItem == null) 
+            {
+                if (DialogResult.OK == MessageBox.Show("Please Select an Exam to load.", "No Exam To Load", MessageBoxButtons.OK, MessageBoxIcon.Hand)) 
+                {
+                    return;
+                }
+            }
             pan_Template.Controls.Clear();
             tb_TemplateName.Text = cb_ExistingExams.Text;
             int rotation = 0;
@@ -258,7 +265,6 @@ namespace TwainCapture_TemplateCreator
                 if (lines[i].Contains("Image") && !lines[i].Contains("Count"))
                 {
                     Console.WriteLine(lines[i]);
-                    //todo: ~~~~~~~~~~~~~~~~~~~~EXTRACT THE INT FROM lines[i]+3) & lines[i]+4) FOR THE DRAW COORDINATES && PARSE DIRECTION FOR UP AND DOWN AS WELL~~~~~~~~~~~~~
                     string xstr1 = lines[i + 3].Trim();
                     string xstr2 = string.Empty;
                     int xCoord = 0;
@@ -275,8 +281,6 @@ namespace TwainCapture_TemplateCreator
                         ystr2 += match;
                     yCoord = int.Parse(ystr2);
 
-
-
                     if (lines[i + 7].Contains("90")) {
                         rotation = 90;
                         horz = true;
@@ -290,23 +294,21 @@ namespace TwainCapture_TemplateCreator
                         else
                             direction = "U";
                     }
-                    if (horz && lines[i + 5].Contains("True"))
+                    if (horz && lines[i + 5].Contains("True")&&lines[i+6].Contains("True"))
                     {
                         direction = "R";
                     }
                     else
                         direction = "L";
 
-
-
                     pan_Template.Controls.Add(PicBox(new Size(90, 120), xCoord, yCoord,rotation,horz, lines[i + 6].Contains("True"), lines[i + 5].Contains("True"),direction));
-                    Console.WriteLine(lines[i+1]);//SizeX
-                    Console.WriteLine(lines[i+2]);//SizeY
-                    Console.WriteLine(lines[i+3]);//PositionX
-                    Console.WriteLine(lines[i+4]);//PositionY
-                    Console.WriteLine(lines[i+5]);//Mirror
-                    Console.WriteLine(lines[i+6]);//Flip
-                    Console.WriteLine(lines[i+7]);//Rotation
+                    //(lines[i+1]);//SizeX
+                    //(lines[i+2]);//SizeY
+                    //(lines[i+3]);//PositionX
+                    //(lines[i+4]);//PositionY
+                    //(lines[i+5]);//Mirror
+                    //(lines[i+6]);//Flip
+                    //(lines[i+7]);//Rotation
 
                 }
             }
@@ -320,7 +322,11 @@ namespace TwainCapture_TemplateCreator
         /// <param name="e"></param>
         private void btn_DeleteExam_Click(object sender, EventArgs e)
         {
-            if (DialogResult.Yes == MessageBox.Show("", "", MessageBoxButtons.YesNo, MessageBoxIcon.Hand)) 
+            if (cb_ExistingExams.SelectedValue == string.Empty || cb_ExistingExams.SelectedItem == null)
+                if (DialogResult.OK == MessageBox.Show("Please Select an Exam to Delete.", "No Exam Selected", MessageBoxButtons.OK, MessageBoxIcon.Hand))
+                    return;
+
+            if (DialogResult.Yes == MessageBox.Show("Are you sure you want to Delete "+cb_ExistingExams.Text+"?", "Exam Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Hand)) 
             {
                 File.Delete(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86)+@"\Digital Doc\TwainCapture\Templates\"+cb_ExistingExams.Text + ".xml");
                 cb_ExistingExams.SelectedIndex = 0;
