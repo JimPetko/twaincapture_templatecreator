@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>TwainCapture_TemplateCreator</RootNamespace>
     <AssemblyName>TwainCapture_TemplateCreator</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
@@ -129,7 +129,11 @@
     <None Include="Resources\ClearImg25.png" />
     <None Include="Resources\Sequence25.png" />
     <None Include="Resources\setSeq_red25.png" />
+<<<<<<< HEAD
 >>>>>>> 2df89697a8738fed256d8e31d50afd9ee3118a0d
+=======
+    <None Include="Resources\gridC.png" />
+>>>>>>> inDev
     <Content Include="X-Ray.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

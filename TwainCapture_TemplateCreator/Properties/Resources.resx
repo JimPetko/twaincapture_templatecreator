@@ -124,20 +124,23 @@
   <data name="ClearImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ClearImg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="grid5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\grid5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="setSeq_red25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\setSeq_red25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SensorOrient" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\SensorOrient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gridA" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gridA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gridB" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gridB.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="save25" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\save25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sequence" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sequence.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ClearImg25" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ClearImg25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,6 +148,7 @@
   <data name="setSeq_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\setSeq_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+<<<<<<< HEAD
   <data name="setSeq_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\setSeq_red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -164,5 +168,15 @@
   <data name="setSeq_red25" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\setSeq_red25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
 >>>>>>> 2df89697a8738fed256d8e31d50afd9ee3118a0d
+=======
+  <data name="grid5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grid5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gridA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gridA.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gridC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gridC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+>>>>>>> inDev
   </data>
 </root>
